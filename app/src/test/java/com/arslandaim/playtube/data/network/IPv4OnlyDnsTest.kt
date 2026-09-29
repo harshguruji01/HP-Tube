@@ -1,6 +1,6 @@
-/*
- * PlayTube Project Original (2026)
- * arslandaim-hub (GitHub.com/arslandaim-hub)
+﻿/*
+ * HP Tube Project Original (2026)
+ * HarshGuruJi (https://github.com/harshguruji01/HP-Tube)
  * Licenced Under GPL-3.0+
 */
 package com.arslandaim.playtube.data.network

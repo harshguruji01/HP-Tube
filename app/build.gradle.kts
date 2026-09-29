@@ -7,24 +7,34 @@ plugins {
 }
 
 android {
-    namespace = "com.harshguruji.tube"
+    namespace = "com.arslandaim.playtube"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.harshguruji.tube"
+        applicationId = "com.harshguruji.play"
         minSdk = 24
         targetSdk = 36
 
         versionCode = 18
-        versionName = "1.4.3"
+        versionName = "com.harshguruji.play"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("release.keystore")
+            storePassword = "hptubepass"
+            keyAlias = "hptube"
+            keyPassword = "hptubepass"
+        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

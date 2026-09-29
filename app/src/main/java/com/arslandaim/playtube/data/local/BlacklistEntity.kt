@@ -1,0 +1,22 @@
+﻿/*
+ * HP Tube Project Original (2026)
+ * HarshGuruJi (https://github.com/harshguruji01/HP-Tube)
+ * Licenced Under GPL-3.0+
+*/
+package com.arslandaim.playtube.data.local
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "blacklist")
+data class BlacklistEntity(
+    @PrimaryKey
+    val id: String, // Video or Channel ID
+    val type: BlacklistType,
+    val timestamp: Long = System.currentTimeMillis()
+)
+
+enum class BlacklistType {
+    VIDEO,
+    CHANNEL
+}
